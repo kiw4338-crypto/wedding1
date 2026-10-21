@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홍길동 & 신부의 결혼식에 초대합니다</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f7f5f0;
+            color: #4a4a4a;
+            word-break: keep-all;
+        }
+        .font-serif-custom {
+            font-family: 'Gowun Batang', serif;
+        }
+        .font-english {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Fade in animations */
+        .fade-in {
+            animation: fadeIn 1.2s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="flex justify-center min-h-screen">
+    <!-- Mobile Container -->
+    <div class="w-full max-w-md bg-white shadow-2xl overflow-hidden relative pb-16">
+
+        <!-- Header Section / Main Visual -->
+        <div class="relative text-center bg-stone-50 pt-10 pb-8 px-4">
+            <p class="font-english text-xs tracking-widest text-amber-800 uppercase mb-2">Wedding Invitation</p>
+            <h1 class="font-serif-custom text-2xl text-stone-800 font-bold tracking-widest mb-6">홍길동 <span class="text-sm font-normal text-stone-500 mx-1">&</span> 신부</h1>
+            
+            <div class="relative w-full overflow-hidden rounded-t-full shadow-lg border-4 border-white my-4 mx-auto max-w-[320px]">
+                <img src="결혼5.jpg" alt="메인 웨딩 사진" class="w-full h-auto object-cover hover:scale-105 transition duration-500">
+            </div>
+
+            <div class="mt-6 space-y-1">
+                <p class="font-serif-custom text-lg text-stone-700">2027년 10월 9일 토요일 오후 12:00</p>
+                <p class="text-sm text-stone-500">서울신라호텔</p>
+            </div>
+        </div>
+
+        <!-- Invitation Message -->
+        <div class="py-14 px-8 text-center bg-white border-b border-stone-100">
+            <div class="inline-block p-2 bg-amber-50 rounded-full mb-4">
+                <i class="fa-solid fa-heart text-amber-700 text-sm"></i>
+            </div>
+            <h2 class="font-serif-custom text-xl text-stone-800 font-bold mb-6">초대합니다</h2>
+            <p class="font-serif-custom text-stone-600 leading-relaxed text-sm space-y-3">
+                서로가 마주보며 다져온 사랑을<br>
+                이제 한 곳을 바라보며 커어가고자 합니다.<br><br>
+                저희 두 사람이 하나가 되는 뜻깊은 날,<br>
+                소중한 분들을 모시고 약속을 맺고자 합니다.<br><br>
+                부디 오셔서 축복해 주시면<br>
+                더없는 기쁨이 되겠습니다.
+            </p>
+
+            <!-- Family Details -->
+            <div class="mt-10 pt-8 border-t border-stone-100 font-serif-custom text-sm text-stone-700 space-y-2">
+                <div class="flex justify-center items-center gap-2">
+                    <span class="text-stone-500">신랑</span> <span class="font-bold">홍길동</span>
+                </div>
+                <div class="flex justify-center items-center gap-2">
+                    <span class="text-stone-500">신부</span> <span class="font-bold">이몽룡</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- D-Day Counter Section -->
+        <div class="py-10 bg-stone-50 text-center border-b border-stone-100">
+            <p class="font-english text-sm text-amber-800 tracking-wider mb-2">SAVE THE DATE</p>
+            <p class="font-serif-custom text-lg text-stone-800 font-semibold mb-4">2027. 10. 09. SAT 12:00 PM</p>
+            
+            <div class="flex justify-center gap-4 text-stone-700 my-4" id="countdown">
+                <div class="bg-white px-3 py-2 rounded-lg shadow-sm border border-stone-100 w-16">
+                    <span id="days" class="block font-bold text-lg text-amber-800">00</span>
+                    <span class="text-[10px] text-stone-400 uppercase">Days</span>
+                </div>
+                <div class="bg-white px-3 py-2 rounded-lg shadow-sm border border-stone-100 w-16">
+                    <span id="hours" class="block font-bold text-lg text-amber-800">00</span>
+                    <span class="text-[10px] text-stone-400 uppercase">Hours</span>
+                </div>
+                <div class="bg-white px-3 py-2 rounded-lg shadow-sm border border-stone-100 w-16">
+                    <span id="minutes" class="block font-bold text-lg text-amber-800">00</span>
+                    <span class="text-[10px] text-stone-400 uppercase">Mins</span>
+                </div>
+                <div class="bg-white px-3 py-2 rounded-lg shadow-sm border border-stone-100 w-16">
+                    <span id="seconds" class="block font-bold text-lg text-amber-800">00</span>
+                    <span class="text-[10px] text-stone-400 uppercase">Secs</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Photo Gallery -->
+        <div class="py-14 px-6 bg-white border-b border-stone-100 text-center">
+            <p class="font-english text-xs tracking-widest text-amber-800 uppercase mb-1">Gallery</p>
+            <h2 class="font-serif-custom text-xl text-stone-800 font-bold mb-8">소중한 순간들</h2>
+            
+            <div class="grid grid-cols-2 gap-3">
+                <div class="cursor-pointer overflow-hidden rounded-lg shadow-sm aspect-[3/4]" onclick="openModal('결혼1.jpg')">
+                    <img src="결혼1.jpg" alt="갤러리 이미지 1" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="cursor-pointer overflow-hidden rounded-lg shadow-sm aspect-[3/4]" onclick="openModal('결혼3.jpg')">
+                    <img src="결혼3.jpg" alt="갤러리 이미지 3" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="cursor-pointer overflow-hidden rounded-lg shadow-sm aspect-[3/4]" onclick="openModal('결혼4.jpg')">
+                    <img src="결혼4.jpg" alt="갤러리 이미지 4" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="cursor-pointer overflow-hidden rounded-lg shadow-sm aspect-[3/4]" onclick="openModal('결혼2.jpg')">
+                    <img src="결혼2.jpg" alt="갤러리 이미지 2" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="py-12 px-6 bg-stone-50 border-b border-stone-100 text-center">
+            <p class="font-english text-xs tracking-widest text-amber-800 uppercase mb-1">Contact</p>
+            <h2 class="font-serif-custom text-xl text-stone-800 font-bold mb-6">마음 전하실 곳</h2>
+            
+            <div class="space-y-4 max-w-xs mx-auto">
+                <!-- 신랑 연락처 -->
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-stone-200/60 flex items-center justify-between">
+                    <div class="text-left">
+                        <span class="text-xs text-amber-800 font-semibold block">신랑</span>
+                        <span class="font-bold text-stone-800 text-sm">홍길동</span>
+                    </div>
+                    <div class="flex gap-2">
+                        <a href="tel:000-0000-0000" class="w-9 h-9 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 hover:bg-stone-200 transition">
+                            <i class="fa-solid fa-phone text-xs"></i>
+                        </a>
+                        <a href="sms:000-0000-0000" class="w-9 h-9 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 hover:bg-stone-200 transition">
+                            <i class="fa-solid fa-envelope text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 신부 연락처 -->
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-stone-200/60 flex items-center justify-between">
+                    <div class="text-left">
+                        <span class="text-xs text-amber-800 font-semibold block">신부</span>
+                        <span class="font-bold text-stone-800 text-sm">신부</span>
+                    </div>
+                    <div class="flex gap-2">
+                        <a href="tel:000-0000-0000" class="w-9 h-9 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 hover:bg-stone-200 transition">
+                            <i class="fa-solid fa-phone text-xs"></i>
+                        </a>
+                        <a href="sms:000-0000-0000" class="w-9 h-9 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 hover:bg-stone-200 transition">
+                            <i class="fa-solid fa-envelope text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Location / Map Section -->
+        <div class="py-14 px-6 bg-white text-center">
+            <p class="font-english text-xs tracking-widest text-amber-800 uppercase mb-1">Location</p>
+            <h2 class="font-serif-custom text-xl text-stone-800 font-bold mb-2">오시는 길</h2>
+            <p class="text-sm font-semibold text-stone-700 mb-1">서울신라호텔</p>
+            <p class="text-xs text-stone-500 mb-6">서울특별시 중구 동호로 249</p>
+
+            <!-- Map Placeholder / Info Box -->
+            <div class="w-full bg-stone-100 rounded-xl overflow-hidden shadow-inner p-6 mb-6 text-left space-y-4 text-xs text-stone-600">
+                <div>
+                    <span class="font-bold text-stone-800 block mb-1"> 지하철 안내</span>
+                    <p>• 3호선 동대입구역 5번 출구 (도보 약 5분)</p>
+                </div>
+                <div>
+                    <span class="font-bold text-stone-800 block mb-1"> 버스 안내</span>
+                    <p>• 장충동.동대입구역 하차</p>
+                    <p>• 간선버스: 144, 301, 420, 7212</p>
+                </div>
+                <div>
+                    <span class="font-bold text-stone-800 block mb-1"> 주차 안내</span>
+                    <p>• 서울신라호텔 내 무료 주차 가능 (3시간 지원)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="py-8 bg-stone-100 text-center text-xs text-stone-400 border-t border-stone-200">
+            <p class="font-english mb-1">Gildong & Bride</p>
+            <p>© 2027 Wedding Day. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black/90 hidden z-50 items-center justify-center p-4 cursor-pointer" onclick="closeModal()">
+        <div class="relative max-w-full max-h-full">
+            <img id="modalImg" src="" alt="확대 보기" class="max-w-full max-h-[90vh] object-contain rounded">
+            <button class="absolute top-2 right-2 text-white text-2xl p-2">&times;</button>
+        </div>
+    </div>
+
+    <!-- Script Section -->
+    <script>
+        // D-Day Counter Script
+        const weddingDate = new Date("2027-10-09T12:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance < 0) {
+                document.getElementById("countdown").innerHTML = "<p class="text-amber-800 font-bold">결혼식이 시작되었습니다!</p>";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Image Modal Script
+        function openModal(imgSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImg');
+            modalImg.src = imgSrc;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
